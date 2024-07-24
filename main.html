@@ -4,22 +4,64 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+
+	<style>
+
+			section{
+				width:100vw;
+				height:100vh;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				
+			}
+			h1{
+				text-align: center;
+			}
+	
+		
+			.code-container .code{
+				width:50px;
+				height:60px; 
+				border:0.5px solid rgb(238, 230, 230);
+				box-shadow: 0.5px 0.5px 0.5px rgb(226, 216, 204);
+				font-size:24px;
+				text-align: center;
+				
+				
+			}
+
+			.code-container{
+					display:flex;
+					justify-content:center;
+					gap:8px;	
+			}
+		.code:focus{
+			outline:none;
+		
+		}	
+	</style>
 </head>
 
 <body>
-	
-	 <div class="container">
-        <h2 id="verification_heading">Verify Your account</h2>
-        <p id="verification_subtext">We emailed you the six digit code to acciojob@email.com Enter the code below to confirm your email address</p>
-        <div class="input code-container">
-            <input type="number" name="" class=" code" value="0" min="0" max="9" autofocus required>
-            <input type="number" name="" class=" code" value="0" min="0" max="9" required>
-            <input type="number" name="" class=" code" value="0" min="0" max="9" required>
-            <input type="number" name="" class=" code" value="0" min="0" max="9" required>
-            <input type="number" name="" class=" code" value="0" min="0" max="9" required>
-            <input type="number" name="" class=" code" value="0" min="0" max="9" required>
-        </div>
-    </div>
+
+			<section>
+						<div>
+							<h1 id="verification_heading">Verify Your Account</h1>
+						<p id="verification_subtext">We emailed you the six digit code to acciojob@email.com Enter the code below to confirm your email address.</p>
+						
+						<di class="code-container">
+
+							<input type="text" name="code" class="code" maxlength="1">
+							<input type="text" name="code" class="code" maxlength="1">
+							<input type="text" name="code" class="code" maxlength="1">
+							<input type="text" name="code" class="code" maxlength="1">
+							<input type="text" name="code" class="code" maxlength="1">
+							<input type="text" name="code" class="code" maxlength="1">
+						</div>
+						</div>
+			</section>
+	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
 
