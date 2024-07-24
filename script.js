@@ -1,17 +1,27 @@
-function focusNext(currentInput) {
-    if (currentInput.value.length === 1) {
-        const nextInput = currentInput.nextElementSibling;
-        if (nextInput) {
-            nextInput.focus();
-        }
-    }
-}
+//your JS code here. If required.
+const inputs = document.querySelectorAll('.code');
 
-function handleBackspace(currentInput, event) {
-    if (currentInput.value === '' && event.key === 'Backspace') {
-        const previousInput = currentInput.previousElementSibling;
-        if (previousInput) {
-            previousInput.focus();
-        }
-    }
+inputs.forEach((input,index)=>{
+	input.addEventListner('input', (event) => {handleInput(event,index)});
+	input.addEventListner('keydown',(event)=>{handleBackSpace(event,index)});
+});
+
+function handleInput(event,index){
+	const value = event.target.value;
+	if(!isNaN(value) && value >= 0 && value <= 9){
+		if(index<inputs.length-1 && value!== ''){
+			inputs[index + 1].focus();
+		}
+		else{
+			value = '';
+		}
+		
+	}
+	function handleBackSpace(event, index){
+		if(event.key==='Backspace' && index>0 && event.target.value ===''){
+			inputs[index-1].focus();
+		}
+	}
+	
+	
 }

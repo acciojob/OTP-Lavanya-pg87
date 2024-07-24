@@ -1,22 +1,29 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1 id="verification_heading">OTP Verification</h1>
-    <p id="verification_subtext">Please enter the 6-digit OTP sent to your mobile number.</p>
-    <div class="code-container">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-        <input type="text" class="code" maxlength="1" oninput="focusNext(this)" onkeydown="handleBackspace(this)">
-    </div>
-    <script type="text/javascript" src="./script.js"></script>
+	<!-- the entire body must be written by student -->
+	<div id="mainContainer">
+	<h1 id ="verification_heading">Verify Your Account</h1>
+	<h2 id ="verification_subtext">We emailed you the six digit code to acciojob@email.com Enter the code below to confirm your email address.</h2>
+	<div class="code-container"><input type="number" id="digits1" class="code" name="otp" placeholder="0">
+	<input type="number" id="digits2" class="code" name="otp" placeholder="0">
+	<input type="number" id="digits3" class="code" name="otp" placeholder="0">
+	<input type="number" id="digits4" class="code" name="otp" placeholder="0">
+	<input type="number" id="digits5" class="code" name="otp" placeholder="0">
+	<input type="number" id="digits6" class="code" name="otp" placeholder="0"></div>
+	<div id="lastbox"><div id="warn">
+		<p>This is design only.We didn't actually send you an email as we don't have your email,right?</p>
+	</div></div>
+	</div>
+    <script type="text/javascript" src="./script.js">
+</script>
+
 </body>
 
 </html>
