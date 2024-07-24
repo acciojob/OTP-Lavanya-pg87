@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTP Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .code-container {
-            display: flex;
-            gap: 10px;
-        }
-        .code {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .code:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-    </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div>
-        <h1 id="verification_heading">OTP Verification</h1>
-        <p id="verification_subtext">Enter the 6-digit code sent to your phone</p>
-        <div class="code-container">
-            <input type="text" class="code" maxlength="1">
-            <input type="text" class="code" maxlength="1">
-            <input type="text" class="code" maxlength="1">
-            <input type="text" class="code" maxlength="1">
-            <input type="text" class="code" maxlength="1">
-            <input type="text" class="code" maxlength="1">
+    <div id="main">
+	
+	<div>	
+        <h2 id="verification_heading">Verify Your Account</h2>	
+		
+		<div id="verification_subtext">We emailed your the six digits code to acciojob@email.com 
+			Enter the code below to confirm your email address.
+		</div>
+		
+    </div>
+
+        <form action="#">
+            <div class="code-container" id="codeContainer">
+                <input type="number" id="code-0" class="code" placeholder="0" required />
+                <input type="number" id="code-1" class="code" placeholder="0" required />
+                <input type="number" id="code-2" class="code" placeholder="0" required />
+                <input type="number" id="code-3" class="code" placeholder="0" required />
+                <input type="number" id="code-4" class="code" placeholder="0" required />
+                <input type="number" id="code-5" class="code" placeholder="0" required />
+            </div>
+        </form>
+        <div class="lowtext">
+            <p class="mess">This is design only. we didn't actually send 
+                you and emaiil as we <br>
+                don't have your email, right?
+            </p>
         </div>
     </div>
-    <script>
-        const inputs = document.querySelectorAll('.code');
+	
+  <script type="text/javascript" src="./script.js"></script>
 
-        inputs.forEach((input, index) => {
-            input.addEventListener('input', (event) => {
-                const value = event.target.value;
-                if (value.length === 1) {
-                    if (index < inputs.length - 1) {
-                        inputs[index + 1].focus();
-                    }
-                } else if (value.length === 0 && index > 0) {
-                    inputs[index - 1].focus();
-                }
-            });
-        });
-    </script>
 </body>
+
 </html>
